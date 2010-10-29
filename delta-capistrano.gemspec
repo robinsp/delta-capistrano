@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "delta-capistrano.gemspec",
      "lib/delta-capistrano.rb",
      "lib/delta_capistrano/configuration/actions/run_in_shell.rb",
      "spec/delta-capistrano_spec.rb",
