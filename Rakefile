@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "delta-capistrano"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Extra DSLs for capistrano}
+    gem.description = %Q{Extra DSLs for capistrano}
     gem.email = "robin.spainhour@deltaprojects.se"
     gem.homepage = "http://github.com/robinsp/delta-capistrano"
     gem.authors = ["Robin Spainhour"]
