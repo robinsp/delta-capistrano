@@ -1,6 +1,26 @@
 = delta-capistrano
 
-Description goes here.
+Extends the capistrano DSL allowing to run commands as a specified user as if in a shell. 
+  
+single command: 
+
+  in_a_shell_as("u", "from argument")        
+
+  # would be equivalent of
+  sudo "sh -c 'from argument'", :as => "u"
+  
+
+multiple commands in a block:
+
+  in_a_shell_as("u") do |shell|
+    shell.run "from block once"
+    shell.run "from block twice"
+  end      
+
+  # would be equivalent of
+  sudo "sh -c 'from block once; from block twice'", :as => "u"
+  
+
 
 == Note on Patches/Pull Requests
  
