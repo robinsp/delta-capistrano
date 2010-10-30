@@ -1,6 +1,6 @@
 = delta-capistrano
 
-Extends the capistrano DSL allowing to run commands as a specified user as if in a shell. 
+Extends the capistrano DSL allowing one to run commands as a specified user as if in a shell. 
   
 single command: 
 
