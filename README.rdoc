@@ -1,7 +1,9 @@
 = delta-capistrano
 
 Extends the capistrano DSL allowing one to run commands as a specified user as if in a shell. 
-  
+Just require delta-capistrano in your deploy and you are good to go.
+
+
 single command: 
 
   in_a_shell_as("u", "from argument")        
