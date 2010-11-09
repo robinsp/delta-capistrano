@@ -12,7 +12,7 @@ module DeltaCapistrano
           
           yield command_array  if block_given?
 
-          sudo "sh -c '#{command_array.joined_by_semi_colon}'", :as => user
+          sudo "su - #{user} sh -c '#{command_array.joined_by_semi_colon}'"
         end
 
         private

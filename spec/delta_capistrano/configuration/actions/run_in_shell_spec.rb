@@ -6,10 +6,10 @@ describe DeltaCapistrano::Configuration::Actions::RunInShell do
     Class.new { include DeltaCapistrano::Configuration::Actions::RunInShell }.new
   end
   
-  it "should sudo to the supplied user" do
+  it "should su to the supplied user" do
     user = "the_user" 
-    config.should_receive(:sudo).with do |cmd, sudo_conf|
-      sudo_conf.should == {:as => user}
+    config.should_receive(:sudo).with do |cmd|
+      cmd.should =~ /^su - the_user/
     end
     
     config.in_a_shell_as(user)
@@ -18,8 +18,8 @@ describe DeltaCapistrano::Configuration::Actions::RunInShell do
   it "should exec command in a new shell" do
     expected_command = "a command"
     
-    config.should_receive(:sudo).with do |cmd, sudo_conf|
-      cmd.should == "sh -c '#{expected_command}'"
+    config.should_receive(:sudo).with do |cmd|
+      cmd.should == "su - user sh -c '#{expected_command}'"
     end
 
     config.in_a_shell_as("user", expected_command)
