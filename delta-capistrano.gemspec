@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{delta-capistrano}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Robin Spainhour"]
-  s.date = %q{2010-10-30}
+  s.date = %q{2010-11-09}
   s.description = %q{Extra DSLs for capistrano}
   s.email = %q{robin.spainhour@deltaprojects.se}
   s.extra_rdoc_files = [
